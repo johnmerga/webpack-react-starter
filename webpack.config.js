@@ -11,6 +11,14 @@ module.exports = {
     clean: true,
     assetModuleFilename: "assets/[name][ext][query]",
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000,
+    open: true,
+  },
 
   module: {
     rules: [
@@ -43,5 +51,6 @@ module.exports = {
     }),
   ],
   devtool: "source-map",
+
   mode: "development",
 };
